@@ -1,11 +1,13 @@
 ---
 layout: post
 title: '프로세스와 스레드'
-subtitle: 'What is process and thread?'
+subtitle:
 categories: develop
 tags: document
 comments: true
 ---
+
+Process and Thread
 
 # 프로세스와 스레드
 
