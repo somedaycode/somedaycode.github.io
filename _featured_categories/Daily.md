@@ -1,10 +1,10 @@
 ---
 layout: list
-title: Review
-slug: review
+title: Daily
+slug: daily
 menu: true
 submenu: false
-order: 3
+order: 1
 description: >
-  리뷰
+  일상, 이모저모
 ---
