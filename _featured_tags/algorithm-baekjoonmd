@@ -2,7 +2,7 @@
 layout: tag-blog
 title: baekjoon
 slug: baekjoon
-category: Algorithm
+category: algorithm
 menu: false
 order: 1
 ---
