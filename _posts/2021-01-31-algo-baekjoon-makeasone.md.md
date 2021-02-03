@@ -2,8 +2,8 @@
 layout: post
 title: '백준 1463 1로 만들기'
 subtitle: 2xnTile
-categories: Algorithm
-tags: baekoon,algorithm
+categories: algorithm
+tags: baekoon algorithm
 comments: true
 ---
 

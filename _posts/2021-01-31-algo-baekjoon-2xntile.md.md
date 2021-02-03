@@ -2,8 +2,8 @@
 layout: post
 title: '백준 11726 2xn Tile'
 subtitle: 2xnTile
-categories: Algorithm
-tags: baekjoon,algorithm
+categories: algorithm
+tags: baekjoon algorithm
 comments: true
 ---
 

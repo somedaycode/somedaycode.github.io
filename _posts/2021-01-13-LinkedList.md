@@ -3,7 +3,7 @@ layout: post
 title: '연결리스트 (Linked List)'
 subtitle:
 categories: develop
-tags: document,data structure,algorithm
+tags: document datastructure algorithm
 comments: true
 ---
 

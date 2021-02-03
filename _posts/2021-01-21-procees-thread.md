@@ -3,7 +3,7 @@ layout: post
 title: '프로세스와 스레드'
 subtitle:
 categories: develop
-tags: document
+tags: document OS
 comments: true
 ---
 
