@@ -1,8 +1,8 @@
 ---
 layout: tag-blog
-title: Algorithm
-slug: algorithm
-category: develop
+title: baekjoon
+slug: baekjoon
+category: Algorithm
 menu: false
 order: 2
 ---
