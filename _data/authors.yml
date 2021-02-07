@@ -58,7 +58,7 @@ theorydb:
     # stumbleupon:     <username>
     # paypal:          <username>
     email: mailto:somedaycode@gmail.com
-    # rss: https://theorydb.github.io/feed.xml
+    rss: https://somedaycode.github.io/feed.xml
 
 # Another author
 mdo:
