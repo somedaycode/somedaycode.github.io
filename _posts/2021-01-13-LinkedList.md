@@ -4,7 +4,6 @@ title: '연결리스트 (Linked List)'
 subtitle:
 categories: develop
 tags: document datastructure algorithm
-comments: true
 ---
 
 어려운 개념이였던 연결리스트, 구현은 쉽지 않았다.

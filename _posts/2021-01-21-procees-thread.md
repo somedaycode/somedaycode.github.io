@@ -4,7 +4,6 @@ title: '프로세스와 스레드'
 subtitle:
 categories: develop
 tags: document OS
-comments: true
 ---
 
 Process and Thread
