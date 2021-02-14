@@ -1,7 +1,7 @@
 ---
 layout: tag-blog
-title: Documents
-slug: document javascript
+title: document
+slug: document
 category: develop
 menu: false
 order: 1

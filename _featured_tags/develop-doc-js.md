@@ -1,6 +1,6 @@
 ---
 layout: tag-blog
-title: Documents
+title: javascript
 slug: javascript
 category: develop
 menu: false
