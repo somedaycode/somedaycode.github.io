@@ -3,7 +3,7 @@ layout: post
 title: 'Map과 Object'
 subtitle: Map, Object
 categories: develop
-tags: document javascript map object
+tags: javascript map object
 ---
 
 [Hello Coding 그림으로 개념을 이해하는 알고리즘](http://www.yes24.com/Product/Goods/37885448)을 읽으며 Map과 Object의 차이점이 뭘까? 라는 의문이 들었다.
