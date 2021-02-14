@@ -6,7 +6,7 @@ categories: algorithm
 tags: programmers algorithm
 ---
 
-나름 금방 풀었던 문제, `...new Set`의 활용
+나름 금방 풀었던 문제, `...new Set`의 활용과 `sort()` 사용법
 
 주어진 배열에서 모든 두 수의 합을 중복없이 출력하면 된다.
 
