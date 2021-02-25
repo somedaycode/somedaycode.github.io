@@ -1,6 +1,6 @@
 ---
 layout: post
-title: '엘리먼트의 child 순서바꾸기'
+title: '엘리먼트의 자식요소의 순서를 바꿔보자'
 subtitle: changing order of child in element
 categories: develop
 tags: javascript HTML
