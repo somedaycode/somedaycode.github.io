@@ -78,7 +78,7 @@ main();
 - 시간은 setInterval로 체크 했다.
 
 **3초 후에 받은 Response**
-![data1](../assets/img/Develop/cacheStorage/data1.png)
+![data1](https://user-images.githubusercontent.com/71962505/110846932-aad7dc00-82ef-11eb-9f0e-975b084f0a7d.PNG)
 
 ---
 
@@ -126,15 +126,15 @@ main();
 `test`라는 `cacheName`이 보인다.
 `test`는 `caches.open('test')`를 통해 생성된 것
 
-![cacheStorage](../assets/img/Develop/cacheStorage/cacheCategory.png)
+![CacheCategory](https://user-images.githubusercontent.com/71962505/110846913-a7445500-82ef-11eb-953b-bf426d799379.PNG)
 
 Cache Storage 메인 화면을 보면 이렇게 response Data가 test라는 이름의 cache에 잘 담겨져 있는 것을 확인할 수 있다.
 
-![saved](../assets/img/Develop/cacheStorage/saved.png)
+![saved](https://user-images.githubusercontent.com/71962505/110846922-a90e1880-82ef-11eb-8272-41648ca09f91.PNG)
 
 **Cache Storage를 사용한 결과**
 
-![cacheUsed](../assets/img/Develop/cacheStorage/cacheUsed.png)
+![cacheUsed](https://user-images.githubusercontent.com/71962505/110846939-aca19f80-82ef-11eb-94af-a321c0353c0c.PNG)
 
 `cacheStorage`에 같은 값이 있는 것을 참조하여 `fetch`를 하지 않고 바로 데이터를 가져오는 것을 확인할 수 있다.
 
