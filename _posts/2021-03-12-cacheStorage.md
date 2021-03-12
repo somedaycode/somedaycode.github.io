@@ -48,7 +48,7 @@ Cache API는 **request**에 대한 **HTTP response**를 저장하기 위한 획�
 
 4. 추후에 같은 데이터를 받아오게 된다면, `CacheStorage`의 데이터를 가져온다.
 
-### code wihtout using Cache
+### code without using Cache
 
 데이터는 [jsonplaceholder](https://jsonplaceholder.typicode.com/todos)를 활용했다.
 
