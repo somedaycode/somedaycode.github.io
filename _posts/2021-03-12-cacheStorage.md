@@ -151,12 +151,12 @@ Cache Storage 메인 화면을 보면 이렇게 response Data가 test라는 이�
 // clone을 안하면 에러가 뜸
 const main = () => {
   const URL = 'https://jsonplaceholder.typicode.com/todos/1';
-  return fetch(URL).then(function (response) {
+  return fetch(URL).then((response) => {
     // clone을 안하면,
     // TypeError: Failed to execute 'put' on 'Cache': Response body is already used
 
     let responseClone = response.clone();
-    caches.open('v1').then(function (cache) {
+    caches.open('v1').then((cache) => {
       cache.put(URL, responseClone);
     });
     return response.json(); // response를 이미 이곳에서 사용을 하기 때문이다.
