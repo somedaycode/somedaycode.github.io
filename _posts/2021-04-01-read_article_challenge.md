@@ -2,7 +2,7 @@
 layout: post
 title: '기술 아티클 읽기 챌린지!'
 subtitle: read tech articles
-categories: Tech Articles
+categories: review Tech Articles
 tags: article
 ---
 
