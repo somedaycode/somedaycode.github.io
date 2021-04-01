@@ -1,7 +1,7 @@
 ---
 layout: list
 title: Review Tech Articles
-slug: review Tech Articles
+slug: review-Tech-Articles
 menu: true
 submenu: false
 order: 4
