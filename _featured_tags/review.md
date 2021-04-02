@@ -1,8 +1,8 @@
 ---
 layout: tag-blog
-title: document
-slug: document
-category: develop
+title: article
+slug: article
+category: Tech Articles
 menu: false
 order: 1
 ---
