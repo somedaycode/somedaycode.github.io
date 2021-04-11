@@ -71,3 +71,9 @@ DOM, CSSOM 등 브라우저가 리소스를 어떻게 화면에 렌더링을 해
 현재 백엔드와 협업하여 프로젝트를 진행하고 있다. 항상 혼자, 혹은 두명의 프론트가 모여 개발을 했었지만 이번에는 백엔드도 함께 한다. 처음 백엔드와 같이 개발을 하면서 규칙들을 정하기 위해 많은 대화를 나누었다. 규칙에서 빠질 수 없는 한가지를 고르라면 서로가 API를 통해 데이터를 주고 받는 부분이 아닐까 생각된다. 막연히 알고 있던 RESTful API에 대해 알아봤다.
 
 > [프론트엔드와 백엔드가 소통하는 엔드포인트, RESTful API](https://evan-moon.github.io/2020/04/07/about-restful-api/)
+
+#### 11일
+
+현재 자바스크립트에 대해 얼마나 이해하고 있는지 간단히 체크할 수 있는 문제들이 나열되어 있다. 몇개나 맞을 수 있나요??
+
+> [10 JavaScript Quiz Questions and Answers to Sharpen Your Skills](https://typeofnan.dev/10-javascript-quiz-questions-and-answers/)
