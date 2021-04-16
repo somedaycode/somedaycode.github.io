@@ -101,3 +101,9 @@ SSR, CSR의 차이가 무엇인지, 어떠한 이유로 네이버 모바일은 S
 오일나우 팀에서 쓴 블로그 글. 코드스쿼드에서 개발 공부를 하면서 가끔 취업에 대한 고민을 한다. 교육이 끝나고 취업을 준비할 때 포트폴리오를 준비하게 될 텐데... 이 글이 방향을 잡는데 도움이 되었다. 프로젝트를 준비하는 과정을 정리하며, 또 단순히 프로젝트를 끝맺는 것에 의의를 두는 것이 아니라 이후에도 계속 프로젝트를 발전시켜나가는 것이 중요한 것 같다.
 
 > [신입 개발자가 포트폴리오를 준비할 때 알아두면 좋은 것들](https://medium.com/%EC%98%A4%EC%9D%BC%EB%82%98%EC%9A%B0-%ED%8C%80-%EB%B8%94%EB%A1%9C%EA%B7%B8/%EC%A3%BC%EB%8B%88%EC%96%B4-%EA%B0%9C%EB%B0%9C%EC%9E%90%EA%B0%80-%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4%EB%A5%BC-%EC%A4%80%EB%B9%84%ED%95%A0-%EB%95%8C-%EC%95%8C%EC%95%84%EB%91%90%EB%A9%B4-%EC%A2%8B%EC%9D%80-%EA%B2%83%EB%93%A4-ac5304a9ecb9)
+
+#### 16일
+
+Javascript를 쓰다보면 메소드 체이닝을 이용해 보다 간편하고 보기 쉬운 코드를 짤 수 있다. 자주 사용하는 map, reduce, fitler를 더 효율적으로 짜는 예시를 보여준다.
+
+> [[Javascript] map, reduce, filter를 유용하게 활용하는 15가지 방법](https://dongmin-jang.medium.com/javascript-15%EA%B0%80%EC%A7%80-%EC%9C%A0%EC%9A%A9%ED%95%9C-map-reduce-filter-bfbc74f0debd)
