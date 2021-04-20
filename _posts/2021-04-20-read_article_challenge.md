@@ -107,3 +107,15 @@ SSR, CSR의 차이가 무엇인지, 어떠한 이유로 네이버 모바일은 S
 Javascript를 쓰다보면 메소드 체이닝을 이용해 보다 간편하고 보기 쉬운 코드를 짤 수 있다. 자주 사용하는 map, reduce, fitler를 더 효율적으로 짜는 예시를 보여준다.
 
 > [[Javascript] map, reduce, filter를 유용하게 활용하는 15가지 방법](https://dongmin-jang.medium.com/javascript-15%EA%B0%80%EC%A7%80-%EC%9C%A0%EC%9A%A9%ED%95%9C-map-reduce-filter-bfbc74f0debd)
+
+#### 17일, 18일
+
+주말, 오랜만에 쉬었다.
+
+#### 19일
+
+자바스크립트를 사용하면서 객체를 복사하여 사용하는 경우가 많았다. 그때마다 얕은 복사 혹은 깊은 복사에 대한 문제를 가끔 마주할 수 있었다. 이번 글을 통해 얕은 복사와 깊은 복사의 차이가 무엇이며, 어떠한 방법으로 깊은 복사를 진행할 수 있는지도 확인할 수 있었다.(`JSON.stringify or library-Lodash, Ramda 사용`) 하지만 깊은 복사를 해야하는 상황이 온다면 블로그의 마지막 문단이 떠오를 듯.
+
+> 깊은 복사를 하기 전에 과연 깊은 복사를 무리하면서까지 해야하는지 아키텍쳐 관점에서 다시 한 번 생각해봄이 좋지 않을까 하고 생각한다. - watch 기술 블로그
+
+> [깊은 복사와 얕은 복사에 대한 심도있는 이야기](https://medium.com/watcha/%EA%B9%8A%EC%9D%80-%EB%B3%B5%EC%82%AC%EC%99%80-%EC%96%95%EC%9D%80-%EB%B3%B5%EC%82%AC%EC%97%90-%EB%8C%80%ED%95%9C-%EC%8B%AC%EB%8F%84%EC%9E%88%EB%8A%94-%EC%9D%B4%EC%95%BC%EA%B8%B0-2f7d797e008a)
