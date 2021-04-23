@@ -139,3 +139,9 @@ Javascript를 쓰다보면 메소드 체이닝을 이용해 보다 간편하고 
 - 런타임이란? 런타임(영어: runtime→실행시간)은 컴퓨터 과학에서 컴퓨터 프로그램이 실행되고 있는 동안의 동작을 말한다. - [위키백과](https://ko.wikipedia.org/wiki/%EB%9F%B0%ED%83%80%EC%9E%84)
 
 > [UI 런타임으로서의 React](https://overreacted.io/ko/react-as-a-ui-runtime/)
+
+#### 23일
+
+useEffect는 도대체 어떻게 작동하는 걸까? 내가 쓰면 왜 Eslint에 자꾸 걸리지? 제대로 사용하는 것은 맞나? 이러한 의문들을 풀어줄 수 있는 글이다. 앞서 22일에 읽었던 [UI 런타임으로서의 React](https://overreacted.io/ko/react-as-a-ui-runtime/)를 먼저 읽으면 더 도움이 된다.
+
+> [useEffect 완벽 가이드](https://overreacted.io/ko/a-complete-guide-to-useeffect/)
