@@ -145,3 +145,13 @@ Javascript를 쓰다보면 메소드 체이닝을 이용해 보다 간편하고 
 useEffect는 도대체 어떻게 작동하는 걸까? 내가 쓰면 왜 Eslint에 자꾸 걸리지? 제대로 사용하는 것은 맞나? 이러한 의문들을 풀어줄 수 있는 글이다. 앞서 22일에 읽었던 [UI 런타임으로서의 React](https://overreacted.io/ko/react-as-a-ui-runtime/)를 먼저 읽으면 더 도움이 된다.
 
 > [useEffect 완벽 가이드](https://overreacted.io/ko/a-complete-guide-to-useeffect/)
+
+#### 24일
+
+Dan Abramov의 Overreacted 블로그를 연속해서 계속 읽는 중. 모든 글이 내게 정말 큰 도움이 되고 있다. 이번 글은 eslint 스타일 충이 되지 말라는 간략한 메시지와 함께 글을 시작한다. 코드가 제대로 작동하고 로직에 문제가 없는데 eslint에 걸린다면, 내가 사용하고 있는 eslint가 필요한가? 한번 더 생각해야한다.
+
+> 완벽히 유효한 코드를 들고 와서는 “React가 이 코드에 대해 불평해요”라고 말하지만, 사실 불평하고 있는 것은 그 사람들의 lint 설정인 경우를 저는 수도 없이 봐왔습니다!
+
+몇몇의 예시들이 클래스로 작성되어 있어 완전히 이해하지는 못했지만 글이 말하고자 하는 핵심과 흐름을 이해하려 노력했다.
+
+> [탄력적인 컴포넌트 작성하기](https://overreacted.io/ko/writing-resilient-components/)
