@@ -179,3 +179,9 @@ Dan Abramov의 Overreacted 블로그를 연속해서 계속 읽는 중. 모든 �
 예전에 DnD(drag and drop)을 구현하면서 HTML5에서 지원하는 wep api를 사용했었는데, 이분은 단순히 마우스 이벤트로만 to-do list를 구현하였다. 깔끔한 설명과 코드들 때문에 이렇게 저장해놓는다.
 
 > [mouse event만으로 투두리스트(todo list) 만들기](https://changicho.tistory.com/entry/mouse-event%EB%A7%8C%EC%9C%BC%EB%A1%9C-%ED%88%AC%EB%91%90%EB%A6%AC%EC%8A%A4%ED%8A%B8todo-list-%EB%A7%8C%EB%93%A4%EA%B8%B0?category=830513)
+
+#### 29일
+
+오래만에 쉬어가는 느낌으로 당근마켓의 마케팅 이야기를 읽었다. 놀면뭐하니에서 당근마켓을 통해 자전거를 가르쳐주는 편을 재밌게 봤었다. 단순하게 생각했던 중고거래 플랫폼이 이렇게나 커지고 영향력을 끼칠 수 있다니... 당근마켓 중고거래 범위를 바로 옆 이웃까지 작게 만들겠다는 말을 유튜브영상에서 얼핏 본 것 같았는데. 그렇게 될 수 있을까?
+
+> [사용자와 함께하는 당근마켓 마케팅 이야기](https://medium.com/daangn/%EC%82%AC%EC%9A%A9%EC%9E%90%EC%99%80-%ED%95%A8%EA%BB%98%ED%95%98%EB%8A%94-%EB%8B%B9%EA%B7%BC%EB%A7%88%EC%BC%93-%EB%A7%88%EC%BC%80%ED%8C%85-%EC%9D%B4%EC%95%BC%EA%B8%B0-50b7acf58dc1)
