@@ -1,6 +1,6 @@
 ---
 layout: post
-title: '(21년 5월) 기술 아티클 읽기 챌린지!'
+title: '(21년 6월) 기술 아티클 읽기 챌린지!'
 subtitle: read tech articles
 categories: review-Tech-Articles
 tags: article
