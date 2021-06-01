@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'longest common subsequence'
+title: '1143. longest common subsequence'
 subtitle: longest common subsequence'
 categories: algorithm
 tags: leetcode algorithm
