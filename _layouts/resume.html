@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>김선규 | Interactive Resume</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- 
+    Chosen Palette: Warm Neutrals
+    Application Structure Plan: The application is structured around the two core themes of the resume: UX (User Experience) and DX (Developer Experience). A top navigation bar allows for quick access to these thematic sections. The 'UX Innovation' section visualizes user-facing achievements and business impact with charts and stat cards. The 'DX Innovation' section showcases improvements in development processes and productivity, using diagrams and performance metrics. This dual-themed structure is more narrative and engaging than a simple chronological list, directly reflecting the candidate's balanced expertise. A skills section and a final section for other activities complete the application, offering a comprehensive yet easily digestible overview.
+    Visualization & Content Choices: 
+    - UX - User Growth: Goal: Show business impact. Viz: Bar chart (Chart.js) to compare before/after states. Interaction: Hover for details. Justification: Clearly visualizes the 8% growth metric.
+    - UX - MAU Stats: Goal: Inform about service scale. Viz: Large animated number cards. Interaction: Numbers count up on scroll. Justification: Makes large numbers feel dynamic and impressive.
+    - DX - Process Improvement: Goal: Demonstrate efficiency gains. Viz: HTML/CSS diagram showing a 3-step process becoming a 1-step process. Justification: A simple visual flow is more effective than text alone.
+    - DX - Performance Metrics (Bundle Size, CLS): Goal: Show technical optimization skills. Viz: Donut and Line charts (Chart.js). Justification: Standard and effective ways to represent reduction and improvement over time.
+    - Tech Stack: Goal: Display skills attractively. Viz: Grouped, styled tags. Justification: More visually engaging and organized than a simple list.
+    CONFIRMATION: NO SVG graphics used. NO Mermaid JS used.
+    -->
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: #f8f7f5;
+            color: #333;
+        }
+        .chart-container {
+            position: relative;
+            margin: auto;
+            height: 300px;
+            width: 100%;
+            max-width: 500px;
+        }
+        .stat-card h3 {
+            transition: color 0.3s ease;
+        }
+        .stat-card:hover h3 {
+            color: #1e88e5;
+        }
+        .nav-link {
+            transition: color 0.3s ease, border-color 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #1e88e5;
+            border-color: #1e88e5;
+        }
+        .tag-skill {
+            transition: all 0.2s ease-in-out;
+        }
+        .tag-skill:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-2xl font-bold text-gray-800">
+                    <a href="#hero">김선규</a>
+                </div>
+                <nav class="hidden md:flex space-x-6 text-gray-600">
+                    <a href="#ux-innovation" class="nav-link border-b-2 border-transparent pb-1">UX 혁신</a>
+                    <a href="#dx-innovation" class="nav-link border-b-2 border-transparent pb-1">DX 혁신</a>
+                    <a href="#tech-stack" class="nav-link border-b-2 border-transparent pb-1">기술 스택</a>
+                    <a href="#more" class="nav-link border-b-2 border-transparent pb-1">기타 활동</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8 md:py-16">
+        
+        <!-- Hero Section -->
+        <section id="hero" class="text-center py-16">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-gray-800 mb-4">비즈니스 성장을 이끄는 프론트엔드 엔지니어</h1>
+            <p class="max-w-3xl mx-auto text-lg text-gray-600 leading-relaxed">
+                사용자 경험(UX)과 개발자 경험(DX)을 모두 아우르며, 대규모 서비스 개편부터 개발 생산성 자동화까지 균형 잡힌 경험으로 비즈니스 성장에 기여합니다. 기술을 통해 사용자와 동료 모두에게 긍정적인 경험을 제공하는 것을 목표로 합니다.
+            </p>
+            <div class="mt-8 text-sm text-gray-500">
+                <span>+82 10-3411-4402</span> | <span>somedaycode@gmail.com</span>
+            </div>
+        </section>
+
+        <!-- UX Innovation Section -->
+        <section id="ux-innovation" class="py-16">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800">사용자 경험(UX) 혁신</h2>
+                <p class="text-md text-gray-500 mt-2">데이터와 사용자 중심 설계를 통해 실질적인 비즈니스 성과를 창출한 프로젝트들입니다.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-center">
+                <div class="lg:col-span-2 bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-xl text-gray-700 mb-2">카카오페이 자산관리 UI/UX 개편</h3>
+                    <p class="text-gray-600 mb-4">MAU 200만 이상의 핵심 서비스인 '자산홈' 및 '통합내역'의 대규모 개편을 주도했습니다. 웹 접근성을 준수하고 컴포넌트 아키텍처를 재설계하여 사용자 만족도와 향후 확장성을 모두 확보했습니다.</p>
+                    <div class="chart-container">
+                        <canvas id="userGrowthChart"></canvas>
+                    </div>
+                    <p class="text-center text-sm text-gray-500 mt-2">'자산송금' 기능 이용자 수 변화 (개편 전후)</p>
+                </div>
+                <div class="space-y-8">
+                    <div class="stat-card bg-white p-6 rounded-xl shadow-md text-center">
+                        <h3 class="text-5xl font-extrabold text-blue-600" data-target="8">0</h3>
+                        <p class="text-gray-600 font-medium mt-1">핵심 기능 이용자 증가 (%)</p>
+                    </div>
+                    <div class="stat-card bg-white p-6 rounded-xl shadow-md text-center">
+                        <h3 class="text-5xl font-extrabold text-blue-600" data-target="422">0</h3>
+                        <p class="text-gray-600 font-medium mt-1">내역 확인 서비스 MAU (만+)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DX Innovation Section -->
+        <section id="dx-innovation" class="py-16">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800">개발자 경험(DX) 혁신</h2>
+                <p class="text-md text-gray-500 mt-2">팀의 생산성과 코드 품질을 높이기 위해 직접 구축하고 개선한 시스템과 프로세스입니다.</p>
+            </div>
+            <div class="grid md:grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Resource Center -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-xl text-gray-700 mb-4">전사 리소스 관리 시스템 '리소스센터' 구축</h3>
+                    <p class="text-gray-600 mb-4">파편화된 디자인 에셋 관리 문제를 해결하기 위해 중앙 관리 시스템을 신규 구축했습니다. 디자이너와 개발자 간의 협업 효율을 극대화하고 배포 프로세스를 개선했습니다.</p>
+                    <div class="flex justify-around items-center text-center">
+                        <div>
+                            <p class="text-gray-500 text-sm">Before</p>
+                            <div class="text-3xl font-bold">3단계</div>
+                        </div>
+                        <div class="text-4xl text-blue-500 font-light">→</div>
+                        <div>
+                            <p class="text-blue-500 text-sm">After</p>
+                            <div class="text-3xl font-bold text-blue-600">1단계</div>
+                        </div>
+                    </div>
+                    <p class="text-center text-sm text-gray-500 mt-4">리소스 전달 프로세스 개선</p>
+                </div>
+                <!-- Productivity Improvements -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-bold text-xl text-gray-700 mb-4">개발 환경 및 생산성 개선</h3>
+                     <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mr-2">✓</span>
+                            <span><strong>pnpm 도입 주도:</strong> 데이터 기반 분석으로 차세대 패키지 매니저 도입을 이끌어 의존성 설치 속도 개선</span>
+                        </li>
+                        <li class="flex items-start">
+                             <span class="text-blue-500 mr-2">✓</span>
+                            <span><strong>CI/CD 표준화:</strong> Jenkins 배포 파이프라인 개선으로 빌드/배포 프로세스 자동화</span>
+                        </li>
+                         <li class="flex items-start">
+                             <span class="text-blue-500 mr-2">✓</span>
+                            <span><strong>'스킴매니저' 개발:</strong> 파편화된 URL Scheme을 통합 관리하여 휴먼 에러 방지 및 탐색 시간 단축</span>
+                        </li>
+                    </ul>
+                </div>
+                 <!-- Performance Optimization -->
+                <div class="lg:col-span-2 grid md:grid-cols-2 gap-8 mt-8">
+                     <div class="bg-white p-6 rounded-xl shadow-md">
+                        <h3 class="font-bold text-xl text-gray-700 mb-2">줌인터넷 웹 성능 최적화</h3>
+                        <p class="text-gray-600 mb-4">지속적인 성능 측정 및 개선 작업을 통해 사용자 경험에 직결되는 지표들을 크게 향상시켰습니다.</p>
+                        <div class="chart-container !h-[250px]">
+                            <canvas id="bundleSizeChart"></canvas>
+                        </div>
+                         <p class="text-center text-sm text-gray-500 mt-2">번들 사이즈 최적화</p>
+                    </div>
+                     <div class="bg-white p-6 rounded-xl shadow-md">
+                        <h3 class="font-bold text-xl text-gray-700 mb-2">Web Vitals 개선</h3>
+                        <p class="text-gray-600 mb-4">Sentry 도입, 에러 추적, 코드 최적화를 통해 서비스 안정성과 사용자 경험 지표를 개선했습니다.</p>
+                        <div class="chart-container !h-[250px]">
+                            <canvas id="clsScoreChart"></canvas>
+                        </div>
+                         <p class="text-center text-sm text-gray-500 mt-2">CLS 점수 개선 추이</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack Section -->
+        <section id="tech-stack" class="py-16">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800">기술 스택</h2>
+                <p class="text-md text-gray-500 mt-2">프로젝트에 활용하는 주요 기술들입니다.</p>
+            </div>
+            <div class="max-w-4xl mx-auto">
+                <div class="mb-8">
+                    <h3 class="font-semibold text-lg text-gray-700 mb-4">Languages</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="tag-skill bg-white shadow-sm rounded-lg px-4 py-2 text-gray-700">TypeScript</span>
+                        <span class="tag-skill bg-white shadow-sm rounded-lg px-4 py-2 text-gray-700">JavaScript (ES6+)</span>
+                    </div>
+                </div>
+                <div class="mb-8">
+                    <h3 class="font-semibold text-lg text-gray-700 mb-4">Frontend & State Management</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="tag-skill bg-white shadow-sm rounded-lg px-4 py-2 text-gray-700">React</span>
+                        <span class="tag-skill bg-white shadow-sm rounded-lg px-4 py-2 text-gray-700">React Query</span>
+                        <span class="tag-skill bg-white shadow-sm rounded-lg px-4 py-2 text-gray-700">Next.js</span>
+                        <span class="tag-skill bg-white shadow-sm rounded-lg px-4 py-2 text-gray-700">Vue.js</span>
+                    </div>
+                </div>
+                <div class="mb-8">
+                    <h3 class="font-semibold text-lg text-gray-700 mb-4">Styling</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="tag-skill bg-white shadow-sm rounded-lg px-4 py-2 text-gray-700">CSS3</span>
+                        <span class="tag-skill bg-white shadow-sm rounded-lg px-4 py-2 text-gray-700">SCSS</span>
+                        <span class="tag-skill bg-white shadow-sm rounded-lg px-4 py-2 text-gray-700">Styled-Components</span>
+                    </div>
+                </div>
+                <div class="mb-8">
+                    <h3 class="font-semibold text-lg text-gray-700 mb-4">Testing, DevOps & Productivity</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="tag-skill bg-white shadow-sm rounded-lg px-4 py-2 text-gray-700">Jest</span>
+                        <span class="tag-skill bg-white shadow-sm rounded-lg px-4 py-2 text-gray-700">Cypress</span>
+                        <span class="tag-skill bg-white shadow-sm rounded-lg px-4 py-2 text-gray-700">Storybook</span>
+                        <span class="tag-skill bg-white shadow-sm rounded-lg px-4 py-2 text-gray-700">GitHub Actions</span>
+                        <span class="tag-skill bg-white shadow-sm rounded-lg px-4 py-2 text-gray-700">Jenkins</span>
+                        <span class="tag-skill bg-white shadow-sm rounded-lg px-4 py-2 text-gray-700">pnpm</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- More Section -->
+        <section id="more" class="py-16 bg-white rounded-xl shadow-md">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800">기타 활동 및 학력</h2>
+            </div>
+            <div class="max-w-3xl mx-auto grid md:grid-cols-2 gap-8 text-center md:text-left">
+                <div>
+                    <h3 class="font-bold text-lg text-gray-700 mb-3">활동 (Activities)</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li><strong>코드스쿼드 부트캠프</strong><br><span class="text-sm">- 자바스크립트 기초과정 멘토<br>- 마스터즈 과정 코드리뷰어</span></li>
+                        <li><strong>기술 아티클 번역</strong><br><span class="text-sm">- ‘ECMAScript 스펙을 읽는 법’</span></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg text-gray-700 mb-3">교육 / 병역</h3>
+                     <ul class="space-y-2 text-gray-600">
+                        <li><strong>한국외국어대학교</strong><br><span class="text-sm">경영학 전공 (2016.02 ~ 2022.02)</span></li>
+                        <li><strong>코드스쿼드</strong><br><span class="text-sm">프론트엔드 마스터즈 코스 (2021.01 ~ 2021.06)</span></li>
+                        <li><strong>공군 병장 만기전역</strong><br><span class="text-sm">(2017.07 ~ 2018.10)</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="text-center py-6 text-sm text-gray-500">
+        <p>&copy; 2024 김선규. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // Animated number counter
+            const counters = document.querySelectorAll('.stat-card h3');
+            const speed = 200;
+
+            const animateCounter = (counter) => {
+                const target = +counter.getAttribute('data-target');
+                const updateCount = () => {
+                    const count = +counter.innerText;
+                    const inc = target / speed;
+
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count + inc);
+                        setTimeout(updateCount, 1);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+                updateCount();
+            };
+            
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateCounter(entry.target);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            counters.forEach(counter => {
+                observer.observe(counter);
+            });
+
+            // Smooth scrolling for nav links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            // Chart.js Implementations
+            const chartFontColor = '#6b7280';
+            Chart.defaults.font.family = "'Noto Sans KR', sans-serif";
+            
+            // 1. User Growth Chart
+            const userGrowthCtx = document.getElementById('userGrowthChart').getContext('2d');
+            new Chart(userGrowthCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['개편 전', '개편 후'],
+                    datasets: [{
+                        label: '핵심 기능 이용자 수',
+                        data: [100, 108],
+                        backgroundColor: ['rgba(156, 163, 175, 0.6)', 'rgba(59, 130, 246, 0.6)'],
+                        borderColor: ['rgba(156, 163, 175, 1)', 'rgba(59, 130, 246, 1)'],
+                        borderWidth: 1,
+                        barPercentage: 0.6,
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: { display: false },
+                            grid: { display: false },
+                        },
+                        x: {
+                           ticks: { color: chartFontColor, font: { size: 14 } },
+                           grid: { display: false },
+                        }
+                    },
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    if(context.dataIndex === 0) return ' 기준 100%';
+                                    return ' 8% 증가';
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+            // 2. Bundle Size Chart
+            const bundleSizeCtx = document.getElementById('bundleSizeChart').getContext('2d');
+            new Chart(bundleSizeCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['최적화 전', '최적화된 용량 (27% 감소)'],
+                    datasets: [{
+                        data: [27, 73],
+                        backgroundColor: ['rgba(239, 68, 68, 0.2)', 'rgba(34, 197, 94, 0.6)'],
+                        borderColor: ['rgba(239, 68, 68, 0)', 'rgba(34, 197, 94, 0)'],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                     plugins: {
+                        legend: { position: 'bottom', labels: { color: chartFontColor } },
+                        tooltip: { enabled: false }
+                    }
+                }
+            });
+
+            // 3. CLS Score Chart
+            const clsScoreCtx = document.getElementById('clsScoreChart').getContext('2d');
+            new Chart(clsScoreCtx, {
+                type: 'line',
+                data: {
+                    labels: ['개선 시작', '중간 과정', '개선 완료'],
+                    datasets: [{
+                        label: 'CLS 점수',
+                        data: [0.5, 0.2, 0.01],
+                        fill: true,
+                        backgroundColor: 'rgba(59, 130, 246, 0.1)',
+                        borderColor: 'rgba(59, 130, 246, 1)',
+                        tension: 0.3,
+                        pointBackgroundColor: 'rgba(59, 130, 246, 1)',
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                     scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 0.6,
+                             ticks: { color: chartFontColor }
+                        },
+                         x: {
+                             ticks: { color: chartFontColor }
+                         }
+                    },
+                    plugins: {
+                        legend: { display: false }
+                    }
+                }
+            });
+
+        });
+    </script>
+</body>
+</html>
